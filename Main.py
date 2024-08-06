@@ -28,5 +28,4 @@ def main():
     
     trip.display_trip_info()
 
-if __name__ == "__main__":
     main()
