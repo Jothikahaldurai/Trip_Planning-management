@@ -25,6 +25,19 @@ def main():
         if resort.lower() == 'close':
             break
         trip.add_resort(resort)
+
+    cost = float(input("Enter package cost: "))
+    meals_included = input("Are meals included? (yes/no): ").lower() == 'yes'
+    guided_tours = input("Enter guided tours (comma separated): ").split(',')
+
+    package_details = {
+        "cost": cost,
+        "meals_included": meals_included,
+        "guided_tours": [tour.strip() for tour in guided_tours]
+    }
+    
+    trip.set_package_details(package_details)
+
     
     trip.display_trip_info()
 
